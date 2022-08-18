@@ -1,12 +1,17 @@
-import React from 'react';
 import "./assets/scss/style.scss";
-import Button from "./components/Button";
+
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "pages/LandingPage";
 
 function App() {
   return (
     <div className="App">
-      Halo Dunia, Bagaimana Kabarmu?
-      <Button/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

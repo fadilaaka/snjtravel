@@ -40,7 +40,7 @@
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
-
+  min-height: 50px;
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
@@ -60,6 +60,10 @@
     } @else {
       box-shadow: var(--#{$prefix}btn-focus-box-shadow);
     }
+  }
+
+  &.btn-shadow {
+    box-shadow: 0px 8px 15px rgba($primary, 0.3);
   }
 
   .btn-check:checked + &,
