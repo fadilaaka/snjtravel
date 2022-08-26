@@ -8,10 +8,21 @@ export default function Header() {
   };
   return (
     <header className="spacing-sm">
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <div className="container">
           <IconLogo />
-          <div className="collapse navbar-collapse">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarToggler">
             <ul className="navbar-nav ms-auto">
               <li className={`nav-item${getNavLinkClass("/")}`}>
                 <Button className="nav-link" type="link" href="">
@@ -35,8 +46,8 @@ export default function Header() {
               </li>
             </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 }

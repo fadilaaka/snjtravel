@@ -10,16 +10,15 @@ import { numberFormat } from "utilities/formatNumber";
 export default function Hero(props) {
   const showMostPicked = () => {
     window.scrollTo({
-      top: (props.refMostPicked.current.offsetTop = 30),
+      top: props.refMostPicked.current.offsetTop - 30,
       behavior: "smooth",
     });
-    alert("Button show me now clicked");
   };
 
   return (
     <section className="container pt-4">
       <div className="row align-items-center">
-        <div className="col-auto pe-5" style={{ width: 530 }}>
+        <div className="col-auto mx-auto" style={{ width: 530 }}>
           <h1 className="fw-bold lh-sm mb-3">
             Forget Busy Work, <br />
             Start Next Vacation
@@ -77,7 +76,7 @@ export default function Hero(props) {
             </div>
           </div>
         </div>
-        <div className="col-6 ps-5">
+        <div className="col-auto mx-auto">
           <div style={{ width: 540, height: 370 }}>
             <img
               width={500}
