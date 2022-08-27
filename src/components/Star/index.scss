@@ -1,0 +1,20 @@
+.stars {
+    position: relative;
+    min-width: 200px;
+    display: inline-flex;
+    .star {
+        position: absolute;
+        z-index: 2;
+        display: inline-flex;
+        mask: url(../../assets/images/icons/star-icon.svg) no-repeat center left;
+        &:not(.placeholder) {
+            z-index: 2;
+            background-color: #ffc107;
+        }
+        &.placeholder {
+            z-index: 1;
+            background-color: #ced4da;
+            cursor: default;
+        }
+    }
+}

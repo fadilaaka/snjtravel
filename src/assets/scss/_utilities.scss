@@ -540,7 +540,10 @@ $utilities: map-merge(
           "white-50": rgba($white, .5), // deprecated
           "reset": inherit,
           "gray-800": $gray-800,
+          "gray-700": $gray-700,
+          "gray-600": $gray-600,
           "gray-500": $gray-500,
+          "gray-100": $gray-100,
         )
       )
     ),
