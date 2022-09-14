@@ -24,6 +24,10 @@
 }
 
 .breadcrumb-item {
+  a {
+    color: grey;
+    text-decoration: none;
+  }
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
     padding-left: var(--#{$prefix}breadcrumb-item-padding-x);

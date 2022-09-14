@@ -56,6 +56,36 @@
 @import "utilities/api";
 // scss-docs-end import-stack
 
+@include media-breakpoint-down(sm) {
+    .hero-image-placeholder {
+        width: 100%; 
+        // height: 370px;
+    }
+
+    .container-grid {
+        .item.column-4,
+        .item.column-3 {
+            grid-column-end: span 12;
+        }
+    }
+
+    .testimonial-hero {
+        img {
+            margin: -30px 0 0 -30px;
+        }
+    }
+
+    .hero-image-placeholder {
+        display: none;
+    }
+
+    .hero-text,
+    .hero-text p {
+        text-align: center;
+        width: 100% !important;
+    }
+}
+
 .brand-text-icon {
     font-size: 26px;
     font-weight: 500;
@@ -246,5 +276,12 @@ footer {
         margin-top: 50px 0;
         font-weight: 300;
         color: $gray-600;
+    }
+}
+
+main {
+    p {
+        color: $gray-600;
+        font-weight: 300;
     }
 }
