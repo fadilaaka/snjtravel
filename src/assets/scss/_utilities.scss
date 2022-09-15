@@ -539,6 +539,7 @@ $utilities: map-merge(
           "black-50": rgba($black, .5), // deprecated
           "white-50": rgba($white, .5), // deprecated
           "reset": inherit,
+          "gray-900": $gray-900,
           "gray-800": $gray-800,
           "gray-700": $gray-700,
           "gray-600": $gray-600,

@@ -4,7 +4,7 @@ import IconLogo from "./IconText";
 import { Fade } from "react-reveal";
 import { useLocation } from "react-router-dom";
 
-export default function Header(props) {
+export default function Header({ isCentered }) {
   const { pathname } = useLocation();
   useEffect(() => {
     console.log(pathname);
@@ -12,6 +12,22 @@ export default function Header(props) {
   const getNavLinkClass = (path) => {
     return pathname === path ? " active" : "";
   };
+
+  if (isCentered) {
+    return (
+      <Fade>
+        <header className="spacing-sm">
+          <div className="container">
+            <nav className="navbar navbar-expand-lg navbar-light">
+              <Button className="brand-text-icon mx-auto" href="/" type="link">
+                <IconLogo />
+              </Button>
+            </nav>
+          </div>
+        </header>
+      </Fade>
+    );
+  }
   return (
     <Fade>
       <header className="spacing-sm">
